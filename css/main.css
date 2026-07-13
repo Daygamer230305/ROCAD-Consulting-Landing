@@ -498,7 +498,10 @@ a { text-decoration: none; }
   .nav { padding: 16px 20px; }
   .nav__links { display: none; }
   .section, .cta { padding-left: 20px; padding-right: 20px; }
-  .hero__content { padding: 72px 20px 88px; }
+  .hero__content { padding: 96px 20px 72px; min-height: 0; }
+  /* the wide artwork distorts on narrow screens: fall back to the navy fade */
+  .hero::before { background-image: var(--gradient-navy-fade); animation: none; }
+  .hero::after { display: none; }
   .pain-grid { grid-template-columns: 1fr; }
   .comparison { grid-template-columns: 1fr; }
   .comparison__vs { margin: 0 auto; }
